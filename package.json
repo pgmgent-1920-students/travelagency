@@ -47,5 +47,8 @@
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "navigo": "^7.1.2",
+    "nunjucks": "^3.2.1"
+  }
 }
