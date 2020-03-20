@@ -6,15 +6,27 @@ class PagesController {
     }
     home() {
         let template = nunjucks.render('pages/home.html', {
-            title: 'Time to sweep our shovel'
+            title: 'Neckermann'
         });
         this.wrapper.innerHTML = template;
     }
     about() {
-
+        let template = nunjucks.render('pages/about.html', {
+            title: 'Over Neckermann',
+            description: 'lorem ipsum',
+            team: [
+                'Saskia',
+                'Maggie',
+                'Richard'
+            ]
+        });
+        this.wrapper.innerHTML = template;
     }
     contact() {
-
+        let template = nunjucks.render('pages/contact.html', {
+            title: 'Contacteer ons'
+        });
+        this.wrapper.innerHTML = template;
     }
 }
 

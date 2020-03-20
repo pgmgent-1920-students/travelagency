@@ -88,7 +88,7 @@ module.exports = (env, argv) => {
     devServer: {
       port: process.env.PORT || 8082,
       contentBase: './src',
-      historyApiFallback: true,
+      historyApiFallback: false,
     },
   });
 };
