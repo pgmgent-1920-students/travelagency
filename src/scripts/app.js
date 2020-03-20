@@ -58,7 +58,7 @@ const app = {
       'reizen/wijzig/:id': (params) => {
         this.controllers.trips.edit(params);
       },
-      'reizen/verwijder/:id': () => {
+      'reizen/verwijder/:id': (params) => {
         this.controllers.trips.delete(params);
       },
     })

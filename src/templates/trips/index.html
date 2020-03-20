@@ -1,17 +1,29 @@
+<a href="/reizen/maak" class="btn btn-primary btn-sm" data-navigo>Nieuwe reis toevoegen</a>
+
+<hr>
+
 <table class="table">
     <thead>
       <tr>
         <th scope="col">#</th>
         <th scope="col">Locatie</th>
         <th scope="col">Titel</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
       {% for trip in trips %}
       <tr>
-        <th scope="row">#</th>
-        <td>{{trip.location}}</td>
+        <th scope="row">{{trip.id}}</th>
+        <td>
+          <a href="/reizen/wijzig/{{trip.id}}" data-navigo>
+            {{trip.location}}
+          </a>
+        </td>
         <td>{{trip.title}}</td>
+        <td>
+          <a href="/reizen/verwijder/{{trip.id}}" data-navigo>Trash</a>
+        </td>
       </tr>
       {% endfor %}
     </tbody>
